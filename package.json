@@ -1,6 +1,6 @@
 {
   "name": "teletunnel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": {
     "teletunnel": "./bin/tunnel-cli.js",
     "teletunnel-server": "./bin/tunner-server.js"
