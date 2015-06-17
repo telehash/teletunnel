@@ -1,6 +1,6 @@
 import telehash from "telehash"
 import http from "http"
-import Server from "server/router.js"
+import Server from "./server/server.js"
 
 var teletunnel = function teletunnel(proxy, {hostname, port, subdomain, mesh}, cb){
 
@@ -20,8 +20,10 @@ var teletunnel = function teletunnel(proxy, {hostname, port, subdomain, mesh}, c
 
         server.status(function(err,status){
           console.log("server link up: ", status.up)
+          var url = "http://" + mesh.hashname.substr(0,8) + "." + hostname + ":" + port
 
           mesh.proxy(proxy);
+          cb(null, url);
 
         })
       })
