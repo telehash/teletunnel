@@ -1,6 +1,6 @@
 {
   "name": "teletunnel",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "bin": {
     "teletunnel": "./bin/tunnel-cli.js",
     "teletunnel-server": "./bin/tunnel-server.js"
@@ -16,7 +16,7 @@
     "express": "^4.12.4",
     "express-subdomain": "^1.0.3",
     "minimist": "^1.1.1",
-    "telehash": "git+https://github.com/telehash/telehash-js#debug-thtp",
+    "telehash": "git+https://github.com/telehash/telehash-js#str",
     "url-parse": "^1.0.1"
   },
   "devDependencies": {
