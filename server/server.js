@@ -21,6 +21,7 @@ function Server (port){
       res.json(mesh.json())
     })
     app.listen(port)
+    console.log("app.listen", port)
 
     mesh.extending({link:function(link){
       link.status(function(err){
@@ -30,23 +31,7 @@ function Server (port){
 
         proxy.all("*",function(req, res){
           console.log(subhash + " : proxy subdomain")
-          link.proxy(req,function(pres){
-            console.log("subhash proxy response", pres.headers, pres.statusCode)
-            res.set(pres.headers)
-            var tally = 0, len = parseInt(pres.headers["content-length"]);
-
-            var ddata = new Buffer(0)
-            pres.on("data",function(data){
-              tally += data.length
-              ddata = Buffer.concat([ddata, data])
-              if (tally === len)
-                res.send(ddata)
-            })
-            .on("finish", function(evt){
-              console.log("total body length ",evt, tally, ddata.toString())
-
-            })
-          })
+          link.proxy(req,res)
         })
 
         app.use(subdomain(subhash, proxy))
