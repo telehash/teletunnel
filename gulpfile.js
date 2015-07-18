@@ -2,7 +2,7 @@ var gulp = require("gulp")
 var babel = require("gulp-babel")
 
 gulp.task('babel', function () {
-    return gulp.src("./index.es15.js")
+    return gulp.src("./src/*.js")
         .pipe(babel())
-        .pipe(gulp.dest('./index.js'));
+        .pipe(gulp.dest(__dirname + '/dist'));
 });
