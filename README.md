@@ -1,4 +1,4 @@
-# teletunnel (0.0.8)
+# teletunnel (0.0.9)
 telehash http proxy utility for node.js.
 
 Note
