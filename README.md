@@ -11,11 +11,13 @@ Usage (node v0.10.X)
    npm install teletunnel
 
 To set up a teletunnel server (on example.com)
+```
    $ teletunnel-server -p 8000
-
+```
 To proxy a subdomain on a teletunnel server to a local port (3000 here)
+```
    $ teletunnel -p 3000 -u http://example.com
-
+```
 the command line will spit out your subdomain (e.g. http://gtety6wv.example.com:8000/), go visit it in your browser and it will proxy over telehash to your local port 3000 :)
 
 Note: This module runs with express-subdomain, and Express parses the request URL for a top level domain,
