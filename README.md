@@ -1,4 +1,4 @@
-# teletunnel (0.0.7)
+# teletunnel (0.0.8)
 telehash http proxy utility for node.js.
 
 Note
@@ -9,7 +9,7 @@ The server component will accept ALL requests for proxying, a real configuration
 Usage (node v0.10.X)
 ====
    npm install teletunnel
-   
+
 To set up a teletunnel server (on example.com)
    $ teletunnel-server -p 8000
 
