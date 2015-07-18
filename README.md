@@ -18,6 +18,11 @@ To proxy a subdomain on a teletunnel server to a local port (3000 here)
 
 the command line will spit out your subdomain (e.g. http://gtety6wv.example.com:8000/), go visit it in your browser and it will proxy over telehash to your local port 3000 :)
 
+Note: This module runs with express-subdomain, and Express parses the request URL for a top level domain,
+so developing locally without one won't be possible because Express will treat the subdomain as the domain,
+and the actual domain as a TLD. you can get around this by spoofing a 'real' local domain like local.net with dnsmasq
+or by modifying etc/hosts
+
 HACKING
 ====
 MIT license, go nuts. email Ryan Bennett (nomad.ry@gmail.com) or post an issue if you run into trouble.
