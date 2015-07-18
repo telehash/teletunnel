@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var teletunnel = require("../main.js")
+var teletunnel = require("../dist/index.js")
 var argv = require("minimist")(process.argv.slice(2));
 console.log("sanity")
 if (!argv.p){
